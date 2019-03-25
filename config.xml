@@ -1,0 +1,22 @@
+<root>
+    <bean id="gear" class="io.khasang.reflection.Manual">
+        <property name="type" val="pole"/>
+        <property name="count" val="2"/>
+    </bean>
+    <bean id="conditioner" class="io.khasang.reflection.AirConditioner">
+        <property name="dashboard" ref="dashboard"/>
+    </bean>
+    <bean id="car" class="io.khasang.reflection.Car">
+        <!--<property name="engine" ref="engine"/>-->
+        <!--<property name="gear" ref="gear"/>-->
+        <property name="vin" val="321FG231RT-FQQF"/>
+        <!--<property name="dashboard" ref="dashboard"/>-->
+        <!--<property name="conditioner" ref="conditioner"/>-->
+    </bean>
+    <bean id="dashboard" class="io.khasang.reflection.CarDashboard">
+        <property name="conditioner" ref="conditioner"/>
+    </bean>
+    <bean id="engine" class="io.khasang.reflection.Engine">
+        <property name="power" val="230"/>
+    </bean>
+</root>
